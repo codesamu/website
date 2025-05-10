@@ -1,0 +1,292 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #111;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2em;
+    color: lightgreen;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e5e5e5;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: lightgreen; /* Changes link color to lightgreen on hover */
+}
+
+/* Section Styles */
+.section {
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: lightgreen;
+    margin-bottom: 20px;
+}
+
+/* About Section Styles */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.icons {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.icon {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Projects Section Styles */
+.project {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background-color: #444;
+}
+
+.project-card h3 {
+    color: lightgreen;
+    margin-bottom: 10px;
+}
+
+/* Project Link Styles */
+.project-card h3 a {
+    color: #d1d1d1; /* Subtle grayish-white color */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.project-card h3 a:hover {
+    color: #a1a1a1; /* Slightly darker gray when hovered */
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+.project-card p {
+    color: #ccc;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #111;
+    color: #e5e5e5;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: lightgreen; /* Sets the link color in the footer */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #a1e0a1; /* Slightly lighter green when hovered */
+}
+
+/* Icon Animation Styles */
+.animate-icon {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Invert Color for Custom Icon */
+.icon img.invert-color {
+    filter: invert(1);
+    transition: filter 0.3s ease;
+}
+
+.icon img.invert-color:hover {
+    filter: invert(1) grayscale(100%);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Fade-In Animation for Project Cards */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.more-projects {
+    text-align: center;
+    margin-top: 30px;
+    color: #d1d1d1; /* Light grayish color */
+}
+
+.more-projects a {
+    color: lightgreen;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.more-projects a:hover {
+    color: #a1a1a1; /* Slightly darker gray when hovered */
+    text-decoration: underline;
+}
+
+/* Fully Responsive Tweaks for Phones */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .about-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .icons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .section {
+        padding: 30px 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-card h3 {
+        font-size: 1.2em;
+    }
+
+    .more-projects {
+        font-size: 1em;
+    }
+}
