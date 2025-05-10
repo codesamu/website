@@ -4,69 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel Fronthaler</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'main_page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Samuel Fronthaler</h1>
-            <nav>
-                <ul>
-                    <li><a href="/programms">Programms</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <img src="https://i.imgur.com/OLdkaUy.jpeg" alt="Samuel Fronthaler" class="about-img">
-                <p>Hi, I'm Samuel Fronthaler, a 17-year-old developer from Austria. I'm currently studying at HTL Anichstraße. I primarily code in Python, HTML, CSS, and occasionally VHDL. I'm passionate about building tools and applications to improve productivity and efficiency.</p>
-                <div class="icons">
-                    <div class="icon">
-                        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" class="animate-icon">
-                        <p>Python</p>
-                    </div>
-                    <div class="icon">
-                        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" class="animate-icon">
-                        <p>HTML</p>
-                    </div>
-                    <div class="icon">
-                        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" class="animate-icon">
-                        <p>CSS</p>
-                    </div>
-                    <div class="icon">
-                        <img src="https://static-00.iconduck.com/assets.00/vhdl-icon-512x512-0zi6d3zd.png" alt="VHDL" class="animate-icon invert-color">
-                        <p>VHDL</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="name">Samuel Fronthaler</h1>
+        <a href="#about" class="scroll-down">↓</a>
+        <a href="/programms" class="btn-programms">Programms</a>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <div class="project-card">
-                    <h3><a href="https://github.com/SamuDevHTL/venvy" target="_blank">Python Venv Manager (venvy)</a></h3>
-                    <p>A Python virtual environment manager. You can easily create, delete, and manage virtual environments.</p>
-                </div>
-                <div class="project-card">
-                    <h3><a href="https://github.com/SamuDevHTL/difficulty_dictionary" target="_blank">Trick Dictionary</a></h3>
-                    <p>A dictionary used in the official Austrian parkour competitions to look up and learn tricks.</p>
-                </div>
-                <div class="project-card">
-                    <h3><a href="https://github.com/SamuDevHTL/code-snippets-app" target="_blank">Code Snippet Manager (PyQt)</a></h3>
-                    <p>A PyQt application that helps you organize and manage your code snippets, similar to a dictionary of code.</p>
-                </div>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hi, I'm Samuel Fronthaler, a 17-year-old developer from Austria. </p>
+        <p>I study at HTL Anichstraße and build tools to improve productivity and efficiency in everyday life.</p>
+        <p>I'm also the 2024 youth world champion in parkour. I love coding and parkour.</p>
+        <p>When I'm coding i mostly work with python, html, css and sometimes vhdl.</p>
+    </section>
 
-            <!-- Added text under projects section linking to GitHub -->
-            <div class="more-projects">
-                <p>For more projects -> <a href="https://github.com/samudevhtl" target="_blank">Visit my GitHub</a></p>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-list">
+            <div class="project-card">
+                <h3><a href="https://github.com/SamuDevHTL/venvy" target="_blank">Python Venv Manager (venvy)</a></h3>
+                <p>A Python virtual environment manager to easily create, delete, and manage environments.</p>
+            </div>
+            <div class="project-card">
+                <h3><a href="https://github.com/SamuDevHTL/difficulty_dictionary" target="_blank">Trick Dictionary</a></h3>
+                <p>A dictionary used in the official Austrian parkour competitions to look up and learn tricks.</p>
+            </div>
+            <div class="project-card">
+                <h3><a href="https://github.com/SamuDevHTL/code-snippets-app" target="_blank">Code Snippet Manager (PyQt)</a></h3>
+                <p>A PyQt application to organize and manage your code snippets like a dictionary of code.</p>
             </div>
         </div>
     </section>
@@ -74,4 +48,3 @@
 </body>
 </html>
 
-<!  samudev  >

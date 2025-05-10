@@ -1,9 +1,9 @@
-/* Basic Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -11,282 +11,181 @@ html {
 }
 
 body {
-    background-color: #1b1b1b;
-    color: #e5e5e5;
-    line-height: 1.6;
-}
-
-/* Header Styles */
-header {
-    background-color: #111;
-    padding: 20px 0;
-    border-radius: 10px;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    font-size: 2em;
-    color: lightgreen;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #e5e5e5;
+    background: #f9f9f9 url('https://www.transparenttextures.com/patterns/cartographer.png'); /* Subtle texture */
+    color: #111;
+    min-height: 100vh;
     font-size: 1.1em;
-    transition: color 0.3s;
 }
 
-nav a:hover {
-    color: lightgreen; /* Changes link color to lightgreen on hover */
-}
-
-/* Section Styles */
-.section {
-    padding: 50px 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h2 {
-    color: lightgreen;
-    margin-bottom: 20px;
-}
-
-/* About Section Styles */
-.about-content {
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
     display: flex;
-    align-items: center;
-    gap: 40px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 40px;
 }
 
-.about-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    object-fit: cover;
+/* Gradient Name */
+.name {
+    font-size: 8em; /* Increased size */
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.icons {
-    display: flex;
-    gap: 40px;
-    margin-top: 20px;
-}
-
-.icon {
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.icon:hover {
-    transform: scale(1.1);
-}
-
-.icon img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-/* Projects Section Styles */
-.project {
-    display: flex;
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.project-card {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 15px;
-    flex: 1;
-    min-width: 250px;
-    transition: transform 0.3s ease;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    background-color: #444;
-}
-
-.project-card h3 {
-    color: lightgreen;
-    margin-bottom: 10px;
-}
-
-/* Project Link Styles */
-.project-card h3 a {
-    color: #d1d1d1; /* Subtle grayish-white color */
+/* Scroll Down Arrow */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2em;
     text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-.project-card h3 a:hover {
-    color: #a1a1a1; /* Slightly darker gray when hovered */
-    text-decoration: underline; /* Underline the link on hover */
-}
-
-.project-card p {
-    color: #ccc;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #111;
-    color: #e5e5e5;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 50px;
-}
-
-footer a {
-    text-decoration: none;
-    color: lightgreen; /* Sets the link color in the footer */
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    color: #a1e0a1; /* Slightly lighter green when hovered */
-}
-
-/* Icon Animation Styles */
-.animate-icon {
+    color: #333;
     animation: bounce 1.5s infinite;
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
+/* Programms Button */
+.btn-programms {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #111;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.btn-programms:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+/* Sections */
+.section {
+    padding: 80px 20px;
+    text-align: left; /* Ensure left alignment */
+    color: #111;
+    width: 100%; /* Full width */
+    max-width: none; /* Remove max-width to allow full width */
+    margin-left: 0; /* Remove any left margin */
+}
+
+/* About Section Text Gradient with Color Animation */
+#about h2 {
+    font-size: 3em;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5); /* Initial gradient from pink to blue */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text color transparent so gradient is visible */
+    margin-bottom: 20px;
+    animation: textColorShift 5s infinite alternate; /* Animation for text color */
+}
+
+/* Keyframes for Color Animation */
+@keyframes textColorShift {
+    0% {
+        color: #ff6ec4; /* Pink */
+    }
+    25% {
+        color: #f5a623; /* Orange */
     }
     50% {
-        transform: translateY(-10px);
+        color: #ff6347; /* Red */
+    }
+    75% {
+        color: #8e2de2; /* Purple */
+    }
+    100% {
+        color: #7873f5; /* Blue */
     }
 }
 
-/* Invert Color for Custom Icon */
-.icon img.invert-color {
-    filter: invert(1);
-    transition: filter 0.3s ease;
+/* About Section */
+#about p {
+    font-size: 1.3em; /* Larger text for about section */
+    line-height: 1.0;
+    margin-top: 20px;
 }
 
-.icon img.invert-color:hover {
-    filter: invert(1) grayscale(100%);
+#projects h2 {
+    font-size: 3em;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5); /* Initial gradient from pink to blue */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text color transparent so gradient is visible */
+    margin-bottom: 20px;
+    animation: textColorShift 5s infinite alternate; /* Animation for text color */
+}
+/* Projects Section */
+.projects-list {
+    display: flex;
+    flex-direction: column; /* Stack projects vertically */
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .icons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project {
-        flex-direction: column;
-    }
-
-    .project-card {
-        margin-bottom: 20px;
-    }
+.project-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-/* Fade-In Animation for Project Cards */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+/* Hover effects for the project cards */
+.project-card:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-.more-projects {
-    text-align: center;
-    margin-top: 30px;
-    color: #d1d1d1; /* Light grayish color */
+/* Project Title */
+.project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
 }
 
-.more-projects a {
-    color: lightgreen;
+.project-card h3 a {
+    color: #111;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
-.more-projects a:hover {
-    color: #a1a1a1; /* Slightly darker gray when hovered */
+.project-card h3 a:hover {
+    color: #ff6ec4; /* Adding hover color to project links */
     text-decoration: underline;
 }
 
-/* Fully Responsive Tweaks for Phones */
-@media screen and (max-width: 600px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .about-img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .icons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .icon img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .section {
-        padding: 30px 10px;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .project-card {
-        padding: 15px;
-    }
-
-    .project-card h3 {
-        font-size: 1.2em;
-    }
-
-    .more-projects {
-        font-size: 1em;
-    }
+/* Project Description */
+.project-card p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
 }
+
+/* More Projects Link */
+.more-projects {
+    text-align: left; /* Ensure left alignment */
+    margin-top: 30px;
+    color: #111;
+}
+
+.more-projects a {
+    color: #ff6ec4;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.more-projects a:hover {
+    text-decoration: underline;
+}
+
