@@ -188,4 +188,106 @@ body {
 .more-projects a:hover {
     text-decoration: underline;
 }
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .name {
+        font-size: 6em;
+    }
 
+    #about h2, #projects h2 {
+        font-size: 2.5em;
+    }
+
+    #about p, .project-card p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .name {
+        font-size: 4em;
+        text-align: center;
+    }
+
+    .btn-programms {
+        top: 15px;
+        right: 15px;
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .scroll-down {
+        font-size: 1.5em;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+
+    #about h2, #projects h2 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #about p {
+        font-size: 1em;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .projects-list {
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 1.3em;
+    }
+
+    .project-card p {
+        font-size: 1em;
+    }
+
+    .more-projects {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .name {
+        font-size: 3em;
+    }
+
+    .btn-programms {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .scroll-down {
+        font-size: 1.2em;
+    }
+
+    #about h2, #projects h2 {
+        font-size: 1.8em;
+    }
+
+    #about p, .project-card p {
+        font-size: 0.95em;
+    }
+
+    .project-card h3 {
+        font-size: 1.1em;
+    }
+}
