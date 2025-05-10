@@ -1,6 +1,6 @@
-# Personal Developer Portfolio
+# Functional Portfolio Website
 
-Welcome to my personal portfolio website, where you can explore my recent projects and access a program called *Difficulty Dictionary*.
+This is my personal portfolio website which under the programms tab has some programms running
 
 ## Features
 
