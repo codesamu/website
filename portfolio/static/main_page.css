@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background: #f9f9f9 url('https://www.transparenttextures.com/patterns/cartographer.png'); /* Subtle texture */
+    background: #ffffff url('https://www.transparenttextures.com/patterns/cartographer.png'); /* Subtle texture */
     color: #111;
     min-height: 100vh;
     font-size: 1.1em;
@@ -64,7 +64,7 @@ body {
 }
 
 .btn-programms:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(202, 202, 202, 0.8);
     transform: scale(1.05);
 }
 
@@ -133,7 +133,7 @@ body {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(202, 202, 202, 0.8);
     border-radius: 15px;
     padding: 25px;
     backdrop-filter: blur(10px);
