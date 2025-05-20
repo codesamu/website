@@ -1,5 +1,4 @@
-/* Reset */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +16,6 @@ body {
     font-size: 1.1em;
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     position: relative;
@@ -27,7 +25,6 @@ body {
     padding: 40px;
 }
 
-/* Gradient Name */
 .name {
     font-size: 8em; /* Increased size */
     font-weight: 700;
@@ -36,7 +33,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Scroll Down Arrow */
 .scroll-down {
     position: absolute;
     bottom: 20px;
@@ -47,7 +43,6 @@ body {
     animation: bounce 1.5s infinite;
 }
 
-/* Programms Button */
 .btn-programms {
     position: absolute;
     top: 20px;
@@ -68,66 +63,61 @@ body {
     transform: scale(1.05);
 }
 
-/* Sections */
 .section {
     padding: 80px 20px;
-    text-align: left; /* Ensure left alignment */
+    text-align: left; 
     color: #111;
-    width: 100%; /* Full width */
-    max-width: none; /* Remove max-width to allow full width */
-    margin-left: 0; /* Remove any left margin */
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
 }
 
-/* About Section Text Gradient with Color Animation */
 #about h2 {
     font-size: 3em;
-    background: linear-gradient(135deg, #ff6ec4, #7873f5); /* Initial gradient from pink to blue */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    background-clip: text; /* Clip the background to the text */
-    color: transparent; /* Make text color transparent so gradient is visible */
+    background: linear-gradient(135deg, #ff6ec4, #7873f5); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
     margin-bottom: 20px;
-    animation: textColorShift 5s infinite alternate; /* Animation for text color */
+    animation: textColorShift 5s infinite alternate;
 }
 
-/* Keyframes for Color Animation */
 @keyframes textColorShift {
     0% {
-        color: #ff6ec4; /* Pink */
+        color: #ff6ec4; 
     }
     25% {
-        color: #f5a623; /* Orange */
+        color: #f5a623;
     }
     50% {
-        color: #ff6347; /* Red */
+        color: #ff6347;
     }
     75% {
-        color: #8e2de2; /* Purple */
+        color: #8e2de2;
     }
     100% {
-        color: #7873f5; /* Blue */
+        color: #7873f5;
     }
 }
 
-/* About Section */
 #about p {
-    font-size: 1.3em; /* Larger text for about section */
+    font-size: 1.3em; 
     line-height: 1.0;
     margin-top: 20px;
 }
 
 #projects h2 {
     font-size: 3em;
-    background: linear-gradient(135deg, #ff6ec4, #7873f5); /* Initial gradient from pink to blue */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    background-clip: text; /* Clip the background to the text */
-    color: transparent; /* Make text color transparent so gradient is visible */
+    background: linear-gradient(135deg, #ff6ec4, #7873f5); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
     margin-bottom: 20px;
-    animation: textColorShift 5s infinite alternate; /* Animation for text color */
+    animation: textColorShift 5s infinite alternate; 
 }
-/* Projects Section */
 .projects-list {
     display: flex;
-    flex-direction: column; /* Stack projects vertically */
+    flex-direction: column; 
     gap: 30px;
     margin-top: 40px;
 }
@@ -141,14 +131,12 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-/* Hover effects for the project cards */
 .project-card:hover {
     transform: translateY(-15px);
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Title */
 .project-card h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
@@ -161,20 +149,18 @@ body {
 }
 
 .project-card h3 a:hover {
-    color: #ff6ec4; /* Adding hover color to project links */
+    color: #ff6ec4; 
     text-decoration: underline;
 }
 
-/* Project Description */
 .project-card p {
     font-size: 1.2em;
     margin-top: 10px;
     color: #333;
 }
 
-/* More Projects Link */
 .more-projects {
-    text-align: left; /* Ensure left alignment */
+    text-align: left; 
     margin-top: 30px;
     color: #111;
 }
@@ -188,7 +174,7 @@ body {
 .more-projects a:hover {
     text-decoration: underline;
 }
-/* Responsive Styles */
+
 @media screen and (max-width: 1024px) {
     .name {
         font-size: 6em;
