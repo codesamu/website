@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', filename='logo.ico') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Fronthaler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main_page.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1 class="name">Samuel Fronthaler</h1>
+            <p style="font-size:1.5em; margin-top: 10px; color:#555;">Software developer</p>
+            <div class="hero-btns">
+                <a href="/programms" class="btn-programms"><span>selfhosted programms</span></a>
+                <a href="/projects" class="btn-programms"><span>projects</span></a>
+            </div>
+            <a href="#about" class="scroll-down">↓</a>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="section about-flex">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Hi, I'm Samuel Fronthaler, a 17-year-old developer from Austria (near Innsbruck). </p>
+            <p>I study at HTL Anichstraße and build tools to improve productivity and efficiency in everyday life.</p>
+            <p>I develop with python, go, vhdl, html and css.</p>
+        </div>
+        <div class="about-img">
+            <img src="{{ url_for('static', filename='samuel.jpeg') }}" alt="Samuel Fronthaler" />
+        </div>
+    </section>
+</body>
+</html>
+
