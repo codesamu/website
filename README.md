@@ -133,6 +133,11 @@ If you can't reach the site from your local network, ensure Vite is listening on
 1. The `package.json` scripts have been updated with `--host`.
 2. When running `npm run dev`, you should see a **Network** URL (e.g., `http://192.168.x.x:5173`). Use that IP in your browser.
 
+### "Blocked Host" Error
+If you see `Blocked request. This host ("samudev.xyz") is not allowed`, it means Vite is blocking your domain for security. 
+1. I have already whitelisted `samudev.xyz` in your `vite.config.js`.
+2. If you use a new domain, add it to the `allowedHosts` array in that file.
+
 ---
 
 ## 📜 License
