@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #737373;
+  --accent: #ef4444; /* Red */
+  --surface: #f9f9f9;
+  --surface-hover: #f1f1f1;
+  --border: rgba(0, 0, 0, 0.06);
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Space Mono', monospace;
+}
+
+.artsy-bg {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.artsy-bg::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.05) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.artsy-bg::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.section {
+  padding: 8rem 0;
+}
+
+.glass {
+  background: rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1.5rem;
+}
+
+.gradient-text {
+  color: var(--fg);
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.nav-link {
+  color: var(--muted);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--fg);
+}
+
+.hover-link {
+  position: relative;
+  color: var(--fg);
+}
+
+.hover-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.hover-link:hover::after {
+  width: 100%;
+}
