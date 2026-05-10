@@ -21,7 +21,7 @@ A modern, high-performance personal portfolio website built with **React**, **Vi
 ## 🛠️ Local Development
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18.x or later recommended)
+- [Node.js](https://nodejs.org/) (v20.19.0+ or v22.12.0+ recommended)
 - [npm](https://www.npmjs.com/)
 
 ### Setup
@@ -110,6 +110,28 @@ systemctl restart nginx
 If you are using **Nginx Proxy Manager** or a similar reverse proxy on your Proxmox cluster:
 1. Point your domain (e.g., `samudev.xyz`) to your LXC's internal IP.
 2. Enable SSL (Let's Encrypt).
+
+## 🔧 Troubleshooting
+
+### Node.js Version Error
+If you see `Vite requires Node.js version 20.19+ or 22.12+`, upgrade your Node version in the LXC:
+```bash
+# Upgrade to Node 22
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt install -y nodejs
+```
+
+### "Cannot find native binding" Error
+This is a known issue with `npm` and optional dependencies (like `rolldown`). Fix it with:
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Network Accessibility (LXC)
+If you can't reach the site from your local network, ensure Vite is listening on all interfaces:
+1. The `package.json` scripts have been updated with `--host`.
+2. When running `npm run dev`, you should see a **Network** URL (e.g., `http://192.168.x.x:5173`). Use that IP in your browser.
 
 ---
 
