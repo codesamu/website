@@ -26,7 +26,7 @@ const Hero = () => {
             letterSpacing: '0.3em', 
             textTransform: 'uppercase', 
             fontSize: '0.7rem',
-            color: 'var(--accent-2)'
+            color: 'var(--muted)'
           }}
         >
           Programmer • Digital Artist • DJ
@@ -43,7 +43,6 @@ const Hero = () => {
             fontWeight: 800,
             letterSpacing: '-0.05em'
           }}
-          className="gradient-text"
         >
           Samuel <br /> <span style={{ fontFamily: "'Ballet', cursive", color: 'var(--accent)', fontWeight: 400, fontSize: '1.2em', marginLeft: '-0.1em' }}>Fronthaler</span>
         </motion.h1>
@@ -53,14 +52,14 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           style={{ 
-            fontSize: '1.15rem', 
+            fontSize: 'clamp(1rem, 2.5vw, 1.25rem)', 
             color: 'var(--muted)', 
             marginBottom: '4rem',
             lineHeight: 1.6,
-            maxWidth: 'none'
+            maxWidth: '600px'
           }}
         >
-          Focusing on <span style={{ color: 'var(--accent)' }}>Python</span> and creative automation. Managing a personal <span style={{ color: 'var(--accent-2)' }}>homelab</span> with advanced networking and self-hosted infrastructure.
+          Building with <span style={{ color: 'var(--fg)', fontWeight: 800 }}>Python</span>, mixing <span style={{ color: 'var(--fg)', fontWeight: 800 }}>DJ sets</span>, and running a <span style={{ color: 'var(--fg)', fontWeight: 800 }}>personal homelab</span>.
         </motion.p>
 
         <motion.div

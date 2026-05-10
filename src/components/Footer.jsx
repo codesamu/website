@@ -37,7 +37,7 @@ const Footer = () => {
             <h4 style={{ marginBottom: '1.5rem', color: 'var(--muted)', fontSize: '0.875rem', textTransform: 'uppercase' }}>Social</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <a href="https://github.com/codesamu" className="hover-link">GitHub</a>
-              <a href="#" className="hover-link">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/samuel-fronthaler-984188374/" className="hover-link">LinkedIn</a>
             </div>
           </div>
           <div>
