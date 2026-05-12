@@ -37,11 +37,11 @@ const Projects = () => {
         {loading ? (
           <div style={{ textAlign: 'center', padding: '4rem' }}>Loading...</div>
         ) : (
-          <div 
+          <div
             ref={containerRef}
-            style={{ 
-              display: 'flex', 
-              gap: '1rem', 
+            style={{
+              display: 'flex',
+              gap: '1rem',
               padding: '1rem 10vw',
               overflowX: 'auto',
               scrollbarWidth: 'none',
@@ -68,7 +68,7 @@ const Projects = () => {
               { id: '5xyQ_ypnCjE', title: 'groovy techno B2B set' },
               { id: 'DFvIkZpvm5Y', title: 'Latin Tech House set in the woods' }
             ].map((video) => (
-              <motion.a 
+              <motion.a
                 key={video.id}
                 href={`https://youtube.com/watch?v=5xyQ_ypnCjE`}
                 target="_blank"
@@ -77,8 +77,8 @@ const Projects = () => {
                 style={{ overflow: 'hidden', height: '180px', position: 'relative', background: 'var(--surface)' }}
                 whileHover={{ y: -5, borderColor: 'var(--accent)' }}
               >
-                <img 
-                  src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} 
+                <img
+                  src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                   alt={video.title}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.9 }}
                   onError={(e) => { e.target.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg` }}
@@ -101,13 +101,43 @@ const Projects = () => {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
             {[1, 2, 3, 4].map((i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 className="glass"
-                style={{ aspectRatio: '1', background: 'var(--surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--muted)', fontSize: '0.55rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.2em' }}
-                whileHover={{ scale: 1.05, borderColor: 'var(--accent)' }}
+                style={{
+                  aspectRatio: '1',
+                  overflow: 'hidden',
+                  background: 'var(--surface)',
+                  border: '1px solid var(--border)',
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--muted)',
+                  fontSize: '0.55rem',
+                  fontWeight: 900,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.2em'
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  borderColor: 'var(--accent)'
+                }}
               >
-                Soon
+                {i === 1 ? (
+                  <img
+                    src="/idgaf2.png"
+                    alt="Visual artwork"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block'
+                    }}
+                  />
+                ) : (
+                  'Soon'
+                )}
               </motion.div>
             ))}
           </div>
@@ -130,23 +160,23 @@ const ProjectCard = ({ repo, index, containerRef }) => {
   return (
     <motion.div
       ref={cardRef}
-      style={{ 
+      style={{
         minWidth: '340px',
         width: '340px',
         scrollSnapAlign: 'center',
         scale
       }}
     >
-      <motion.a 
+      <motion.a
         href={repo.html_url}
         target="_blank"
         rel="noopener noreferrer"
         className="glass"
-        style={{ 
-          display: 'flex', 
+        style={{
+          display: 'flex',
           flexDirection: 'column',
           height: '280px',
-          padding: '2rem', 
+          padding: '2rem',
           background: 'var(--surface)',
           border: '1px solid var(--border)',
           boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
@@ -154,10 +184,10 @@ const ProjectCard = ({ repo, index, containerRef }) => {
           color: 'inherit',
           position: 'relative'
         }}
-        whileHover={{ 
-          y: -5, 
-          borderColor: 'var(--accent)', 
-          boxShadow: '0 20px 50px rgba(0,0,0,0.05)' 
+        whileHover={{
+          y: -5,
+          borderColor: 'var(--accent)',
+          boxShadow: '0 20px 50px rgba(0,0,0,0.05)'
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
@@ -166,9 +196,9 @@ const ProjectCard = ({ repo, index, containerRef }) => {
             <Star size={12} style={{ color: 'var(--accent)' }} /> {repo.stargazers_count}
           </div>
         </div>
-        
+
         <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', fontWeight: 800, letterSpacing: '-0.02em' }}>{repo.name}</h3>
-        
+
         <p style={{ color: 'var(--muted)', fontSize: '0.85rem', flexGrow: 1, marginBottom: '1.5rem', lineHeight: 1.6 }}>
           {repo.description || "Digital exploration and software architecture."}
         </p>
